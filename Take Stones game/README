@@ -1,0 +1,26 @@
+This program implements and Alpha-Beta pruning algorithm to play a two-player game called Take-Stones.
+
+Game Rules: 
+The game starts with n stones numbered 1, 2, 3, ..., n.  Players take turns removing one of the remaining 
+numbered stones.  At a given turn there are some restrictions on which numbers (i.e., stones) are legal 
+candidates to be taken.  The restrictions are:
+   •  At  the  first  move,  the  first  player  must choose  an  odd-numbered stone that is strictly less 
+      than n/2.  For example, if n = 7 (n/2 = 3.5), the legal numbers for the first move are 1 and 3.  If 
+      n = 6 (n/2 = 3), the only legal number for the first move is 1.  
+   •  At subsequent moves, players alternate turns. The stone number that a player can take must be a 
+      multiple or factor of the last move (note: 1 is a factor of all other numbers).  Also, this number 
+      may not be one of those that has already been taken.  After a stone is taken, the number is saved 
+      as the new last move.  If a player cannottake a stone, he/she loses the game.
+     
+Class GameState:  defines the state of a game
+    • size:  the number of stones
+    • stones:  a Boolean array of stones, a false value indicates that that stone has been taken.  Notice 
+      that 0 is not a stone, so stones[0] = false, and stoneshas a size of size+ 1
+    • lastMove:  index of the last taken stone
+    
+Class  TakeStones:  the  main  function  that  parses  the  command  line  inputs  and  runs  the  search  
+algorithm
+
+Class AlphaBetaPurning:  where the Alpha-Beta pruning algorithm is implemented
+
+Class Helpers:  helper functions
